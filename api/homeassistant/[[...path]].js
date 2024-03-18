@@ -2,7 +2,7 @@ import { createProxyMiddleware } from 'http-proxy-middleware'
 
 export default createProxyMiddleware({
   router(req) {
-    const region = req.query.region || 'eu'
+    const region = req.query.region || 'in'
     // return 'https://httpbin.org/anything' // for debugging
     return `https://px1.tuya${region}.com/homeassistant`
   },
